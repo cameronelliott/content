@@ -137,7 +137,7 @@ pc.ontrack = (ev) => {
   if (ev.streams && ev.streams[0]) {
     videoElem.srcObject = ev.streams[0];
   } else {
-    let inboundStream = new MediaStream(ev.track);
+    let inboundStream = new MediaStream([ev.track]);
     videoElem.srcObject = inboundStream;
   }
 };
